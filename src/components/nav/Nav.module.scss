@@ -26,3 +26,47 @@
         }
     }
 }
+
+.bottom__nav{
+    padding: 65px 170px;
+    img{
+        width: 180px;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .bottom__nav__form{
+            border: 2px solid var(--main-background-color);
+            border-radius: var(--secondary-border-radius);
+            overflow: hidden;
+            // width: 100%;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            input{
+                border: none;
+                outline: none;
+                font-size: 1.3rem;
+                padding: 20px 0;
+                text-indent: 10px;
+                flex: 1;
+            }
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 12%;
+                height: 100%;
+                padding: 14px 0;
+                background-color: var(--main-background-color);
+                border: none;
+                outline: none;
+                font-size: 2.3rem;
+                color: var(--toastify-color-light);
+
+            }
+        }
+    }  
+}
