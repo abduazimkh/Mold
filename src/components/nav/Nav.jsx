@@ -4,6 +4,9 @@ import uzb from "../../assets/images/uzb.svg"
 import rus from "../../assets/images/rus.png"
 import tel from "../../assets/images/tel.svg"
 import email from "../../assets/images/email.svg"
+import logo from "../../assets/images/logo.svg"
+import { HiOutlineSearch } from 'react-icons/hi';
+
 
 const Nav = () => {
   return <div className={classes.nav__wrapper}>
@@ -23,7 +26,19 @@ const Nav = () => {
         </ul>
       </Container>
     </div>
-    
+    <div className={classes.bottom__nav}>
+      <Container>
+        <div className={classes.item}>
+          <img src={logo} alt="logo picture" />
+          <form className={classes.bottom__nav__form}>
+            <input type="text" placeholder="Поиск..."/>
+            <button>
+              <HiOutlineSearch/>
+            </button>
+          </form>
+        </div>
+      </Container>
+    </div>
   </div>;
 };
 
