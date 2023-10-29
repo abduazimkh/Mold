@@ -6,6 +6,7 @@ import tel from "../../assets/images/tel.svg"
 import email from "../../assets/images/email.svg"
 import logo from "../../assets/images/logo.svg"
 import { HiOutlineSearch } from 'react-icons/hi';
+import { NavLink } from "react-router-dom";
 
 
 const Nav = () => {
@@ -39,6 +40,18 @@ const Nav = () => {
         </div>
       </Container>
     </div>
+
+    <div className={classes.nav__menu}>
+      <Container>
+        <div className={classes.nav__menu__items}>
+          <NavLink  className={({isActive}) => isActive ? 'link link--active':'link'} to='/'>Главная</NavLink>
+          <NavLink  className={({isActive}) => isActive ? 'link link--active':'link'} to='/partners'>Партнеры</NavLink>
+          <NavLink  className={({isActive}) => isActive ? 'link link--active':'link'} to='/about'>О нас</NavLink>
+          <NavLink  className={({isActive}) => isActive ? 'link link--active':'link'} to='/contact'>Контакт</NavLink>
+        </div>
+      </Container>
+    </div>
+
   </div>;
 };
 
