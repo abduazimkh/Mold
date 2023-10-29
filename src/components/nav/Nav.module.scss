@@ -70,3 +70,26 @@
         }
     }  
 }
+
+.nav__menu{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 20px 15px 1px #dcdcdccc;
+}
+
+.nav__menu__items{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    a{
+        font-size: 20px;
+        text-decoration: none;
+        padding: 10px 30px;
+        border: 1px solid #919090aa;
+        border-radius: 25px;
+        color: var(--main-background-color);
+        font-family: var(--toastify-font-family);
+        background-color: #ebebeba2;
+    }
+}
