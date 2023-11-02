@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 
 
 const Nav = () => {
-  return <div className={classes.nav__wrapper}>
+  return( <div className={classes.nav__wrapper}>
     <div className={classes.top__nav}>
       <Container>
         <ul className={classes.top__nav__list}>
@@ -52,7 +52,8 @@ const Nav = () => {
       </Container>
     </div>
 
-  </div>;
+  </div>
+  )
 };
 
 export default Nav;
