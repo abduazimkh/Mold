@@ -6,11 +6,13 @@ import Contact from './routes/contact/Contact';
 import Partners from './routes/partners/Partners';
 import { Routes, Route } from 'react-router-dom';
 import Footer from './components/footer/Footer';
+import Hero from './components/hero/Hero';
 
 function App() {
   return (
     <div className={classes.App__main}>
       <Nav/>
+      <Hero/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/partners' element={<Partners/>}/>
