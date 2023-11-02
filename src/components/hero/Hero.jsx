@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div>
         <div className={classes.shop__btn}>
-            <img src={shop} alt="shop icon" />
+          <img src={shop} alt="shop icon" />
         </div>
     </div>
   )
