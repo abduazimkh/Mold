@@ -1,12 +1,8 @@
 import classes from "./Home.module.scss";
-import shop from "../../assets/images/karzinka.svg"
 
 const Home = () => {
   return (
     <div className={classes.home__wrapper}>
-      <div className={classes.shop__btn}>
-        <img src={shop} alt="shop icon" />
-      </div>
       {/* <div className={classes.home__first__item}>
         <div className={classes.home__modal__menu}>
 wdqwd
