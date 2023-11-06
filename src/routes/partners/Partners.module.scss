@@ -1,0 +1,24 @@
+.patterns__wrapper{
+    padding: 100px 0;
+    h2{
+        font-size: 2rem;
+        font-family: var(--toastify-font-family);
+        font-weight: 700;
+        margin-bottom: 100px;
+
+    }
+    .patterns__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        img{
+            width: 300px;
+        }
+        h3{
+            font-size: 1.5rem;
+            font-family: var(--toastify-font-family);
+        }
+    }
+}
