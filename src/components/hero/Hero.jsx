@@ -39,7 +39,6 @@ const Hero = () => {
             <h2>Корзина пуста</h2>
             <img src={nothing} alt="" />
           </ul>
-
         </div>
     </div>
   )
