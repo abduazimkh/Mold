@@ -1,6 +1,6 @@
 import classes from "./Partners.module.scss";
 import pattersImg from "../../assets/images/patterns.png"
-import { Container } from "../utils/Utils";
+import { Container } from "../../utils/Utils";
  
 const Partners = () => {
   return (

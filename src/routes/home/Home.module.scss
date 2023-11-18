@@ -66,3 +66,51 @@
         }
     }
 }
+
+
+.cards__wrapper{
+    width: 100%;
+    margin-top: 100px;
+    // display: grid;
+    // grid-template-columns: repeat(5, 1fr);
+    // gap: 10px;
+    // .crad{
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: end;
+    //     gap: 20px;
+    //     box-shadow: 0 0 13px -1px rgba(0,0,0,.07);
+    //     border-radius: 10px;
+    //     padding: 10px;
+    //     img{
+    //         width: 100%;
+    //         aspect-ratio: 1/.6;
+    //         object-fit: contain;
+    //     }
+    //     button{
+    //         width: 100%;
+    //         border-radius: 10px;
+    //         background-color: var(--main-background-color);
+    //         color: #fff;
+    //         border: none;
+    //         padding: 10px;
+    //         font-size: 18px;
+    //     }
+    // }   
+}
+
+
+
+// .swiper {
+//     width: 100%;
+// }
+
+// .mySwiper{
+//     padding: 20px 0 !important;
+//     max-height: 400px !important;
+// }
+// z-index: -300 !important;
+
+// .SwiperSlide{
+//     height: 100% !important;
+// }

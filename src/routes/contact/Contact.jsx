@@ -1,5 +1,5 @@
 import classes from "./Contact.module.scss";
-import { Container } from "../../routes/utils/Utils";
+import { Container } from "../../utils/Utils";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";

@@ -2,7 +2,7 @@ import classes from "./Footer.module.scss";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";
-import { Container } from "../../routes/utils/Utils";
+import { Container } from "../../utils/Utils";
 import footerPic from "../../assets/images/footer.svg"
 import { BiLogoTelegram } from "react-icons/bi";
 import { BsFacebook, BsYoutube } from "react-icons/bs";

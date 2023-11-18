@@ -1,5 +1,5 @@
 import classes from "./About.module.scss";
-import { Container } from "../../routes/utils/Utils";
+import { Container } from "../../utils/Utils";
 import about from "../../assets/images/about.jpg"
 
 const About = () => {

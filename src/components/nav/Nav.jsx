@@ -1,4 +1,4 @@
-import { Container } from "../../routes/utils/Utils";
+import { Container } from "../../utils/Utils";
 import classes from "./Nav.module.scss";
 import uzb from "../../assets/images/uzb.svg"
 import rus from "../../assets/images/rus.png"
