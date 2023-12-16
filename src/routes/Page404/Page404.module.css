@@ -1,0 +1,28 @@
+.page404{
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page404 > h1{
+  font-size: 200px;
+  color: var(--main-background-color);
+}
+.page404 > p{
+  font-size: 25px;
+}
+
+.page404 > a{
+  text-decoration: none;
+  color: dodgerblue;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 450px){
+  .page404 > h1{
+    font-size: 150px;
+  }
+}

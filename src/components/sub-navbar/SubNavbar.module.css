@@ -1,0 +1,98 @@
+.home__topside{
+  width: 100%;
+  height: 80px;
+  background-color: #EEEEEE;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 100px;
+}
+
+.topside__items{
+  display: flex;
+}
+
+.topside__lang{
+  cursor: pointer;
+}
+
+.topside__lang > img{
+  width: 40px;
+}
+
+.topside__lang, .topside__phone, .topside__email{
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.topside__lang > span{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.topside__phone, .topside__email {
+  font-size: 20px;
+}
+
+.topside__phone > a, .topside__email > a{
+  color: var(--main-background-color);
+  text-decoration: none;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.topside__phone > a img, .topside__email > a img{
+  margin-right: 10px;
+}
+
+.admin__link{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: var(--main-background-color);
+  width: 100%;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.admin__link > svg{
+  font-size: 35px;
+  margin-right: 10px;
+}
+.topside__contact{
+  display: flex;
+}
+
+@media screen and (max-width:1150px){
+  .home__topside{
+    padding: 0 80px;
+  }
+}
+
+@media screen and (max-width:990px) {
+  .home__topside{
+    padding: 0 30px;
+  }
+  .topside__lang, .topside__phone, .topside__email{
+    margin-right: 0;
+  }
+
+  .topside__lang img{
+    margin-right: 10px;
+    width: 34px;
+  }
+  .topside__lang span,
+  .topside__phone > a span, .topside__email > a span{
+    display: none;
+  }
+  
+}
+@media screen and (max-width:600px){
+  .admin__link span{
+    display: none;
+  }
+  .home__topside{
+    padding: 0 2%;
+  }
+}

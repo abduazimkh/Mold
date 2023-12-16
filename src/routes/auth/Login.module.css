@@ -1,0 +1,135 @@
+.login{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.login__form, .login__preview{
+  width: 50%;
+  height: 100%;
+}
+
+.login__form{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form__panel{
+  width: 60%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form__panel > form{
+  width: 100%;
+}x
+
+.form__panel > form h1{
+  text-align: center;
+  font-size: 60px;
+}
+
+.login__input{
+  width: 100%;
+  font-size: 22px;
+  text-indent: 10px;
+  height: 60px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+}
+
+.login_button{
+  width: 100%;
+  height: 60px;
+  background-color: var(--main-success-backgroundcolor);
+  font-size: 22px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.login__preview{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__preview > img{
+  width: 80%;
+  user-select: none;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+.link{
+  text-decoration: none;
+  color: dodgerblue;
+  font-size: 18px;
+}
+
+.loading{
+  animation: rot 0.5s ease-in-out infinite;
+  font-size: 35px;
+  color: red;
+}
+
+@keyframes rot {
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width:1500px) {
+  .login__preview > img{
+    width: 90%;
+  }
+  .form__panel{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:990px){
+  .login{
+    padding: 5%;
+  }
+  .login__preview > img{
+    width: 100%;
+  }
+  .form__panel{
+    width: 100%;
+  }
+  
+}
+@media screen and (max-width:800px){
+  .login__preview {
+  display: none;    
+  }
+  .login__form{
+    width: 100%;
+    padding: 10%;
+    text-align: center;
+  }
+  .form__panel{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:550px){
+  .login__form{
+    padding: 0;
+  }
+}

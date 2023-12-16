@@ -1,101 +1,79 @@
-import classes from "./Footer.module.scss";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { FiPhoneCall } from "react-icons/fi";
-import { CgMail } from "react-icons/cg";
-import { Container } from "../../utils/Utils";
-import footerPic from "../../assets/images/footer.svg"
-import { BiLogoTelegram } from "react-icons/bi";
-import { BsFacebook, BsYoutube } from "react-icons/bs";
-
-
-const Footer = () => {
+import React from "react";
+import c from "./Footer.module.css";
+import { FaTelegramPlane, FaFacebook, FaYoutube } from 'react-icons/fa';
+import {  footerLinks, FooterTop_info } from "../../static/home__static";
+import { Link } from "react-router-dom";
+import logo from '../../../src/assets/logoBlue.svg';
+import { t } from "i18next";
+import { useSelector } from "react-redux";
+function Footer() {
+  const { language } = useSelector(state => state.lang)
   return (
-    <div className={classes.footer__wrapper}>
-      <Container>
-        <ul className={classes.top__footer__list}>
-          <ul>
-            <li>
-              <HiOutlineLocationMarker />
-            </li>
-            <li>
-              <h3>Наш адресс</h3>
-              <p>
-                Наманганская область, Давлатабадский район, улица Дустлик Шох
-                109
-              </p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <FiPhoneCall />
-            </li>
-            <li>
-              <h3>Свяжитесь с нами</h3>
-              <p>+998 91 186 00 85</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <CgMail />
-            </li>
-            <li>
-              <h3>Электрон адрес</h3>
-              <p>erkinjon.hodjaev@gmail.com</p>
-            </li>
-          </ul>
-        </ul>
-
-        <ul className={classes.footer__bottom__list}>
-          <ul>
-            <img src={footerPic} alt="" />
-            <li>
-              Все инструменты для изготовления пресс-форм, компоненты и
-              аксессуары для пресс-форм, химикаты для пресс-форм, инструменты
-              для шлифование и полирование, абразивные камни, станки для
-              металлообработки с ЧПУ, термопластавтоматы и т.д.
-            </li>
-            <h2>Подписывайтесь на нас</h2>
-            <ul className={classes.contact__list}>
-              <li>
-                <BiLogoTelegram />
-              </li>
-              <li>
-                <BsFacebook />
-              </li>
-              <li>
-                <BsYoutube />
-              </li>
+    <div className={c.footer}>
+      <div className={c.footerWrapper}>
+        <div className={c.footerTop}>
+          {FooterTop_info()?.map((item, inx) => (
+            <div className={c.footerTopInfo} key={inx}>
+              {item.icon}
+              <div className={c.footerTopTitle}>
+              <b className={c.footerHeading}>{item.title}</b>
+                <p className={c.footerTitle}>{item.subtitle}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className={c.footerMain}>
+          <div className={c.footerMainInfo}>
+            <div className={c.footerMainLogo}>
+              <img  src={logo} alt="" />
+            </div>
+            <div className={c.footerTitle}>
+              {t("footer_logo_title")}
+            </div>
+            <div className={c.footerMainFollow}>
+              <b className={c.footerHeading}>{t("follow")}</b>
+              <div className={c.follow__wrapper}>
+              <Link to="/">
+                <FaTelegramPlane />
+              </Link>
+              <Link to="/">
+                <FaFacebook />
+              </Link>
+              <Link to="/">
+                <FaYoutube/>
+              </Link>
+              </div>
+            </div>
+          </div>
+          <div className={c.footerMainInfo}>
+            <div className={c.footerMainHeader}>
+              <b className={c.footerHeading}>{t("footer_navbar_links")}</b>
+              <div className={c.line}></div>
+            </div>
+            <ul className={c.footerLink}>
+              {footerLinks?.map((item, inx) => (
+                <Link className={c.footerTitleLink} to={item.link} key={inx}>
+                  {language === "uz" ? item.title_uz : item.title_ru}
+                </Link>
+              ))}
             </ul>
-          </ul>
-
-          <ul>
-            <h2>Полезные ссылки</h2>
-            <ul className={classes.menuu}>
-              <li>Главная</li>
-              <li>Партнеры</li>
-            </ul>
-            <ul className={classes.menuu}>
-              <li>О нас</li>
-              <li>Контакт</li>
-            </ul>
-          </ul>
-
-          <ul>
-            <h2>Для предложений</h2>
-              <li>
-                Для удобства работы постоянных клиентов и привлечения новых
-                заказчиков был создан этот сайт, на котором можно найти нужные
-                детали, компоненты, инструменты, каталоги и информацию о
-                продуктах. Если Вам не удалось найти что-либо - без
-                замешательства обращайтесь по телефону или почте, мы немедленно
-                поможем.
-              </li>
-          </ul>
-
-        </ul>
-      </Container>
+          </div>
+          <div className={c.footerMainInfo}>
+            <div className={c.footerMainHeader}>
+              <b className={c.footerHeading}>{t("footer_info")}</b>
+              <div className={c.line}></div>
+            </div>
+            <p className={c.footerTitle}>
+              {t("footer_info_title")}
+              {t("footer.motto")}
+            </p>
+          </div>
+        </div>
+        <div className={c.copyrightText}>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
 export default Footer;

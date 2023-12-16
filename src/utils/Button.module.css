@@ -1,0 +1,31 @@
+.u_button{
+  width: 100%;
+  height: 47px;
+  background-color: var(--main-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  border: none;
+  border-radius: 10px;
+}
+
+.u_button > svg{
+  margin-right: 10px;
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.button__counter{
+  padding: 5px 11px;
+  background-color: #fff;
+  color: var(--main-background-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}

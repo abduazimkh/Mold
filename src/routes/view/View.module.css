@@ -1,0 +1,20 @@
+.view{
+  height: auto;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding-bottom: 100px;
+}
+
+.product__viewLoader{
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:600px) {
+  .view{
+    padding-bottom: 50px;
+  }
+}

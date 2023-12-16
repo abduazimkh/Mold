@@ -1,92 +1,31 @@
-import { useState } from "react";
-import classes from "./Home.module.scss";
-import { useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import SwiperSlideButtons from "./SlideButton";
-import { Card, Container } from "../../utils/Utils";
+import React from 'react';
+import c from './Home.module.css';
+import Banner from '../../components/banner/Banner'
+import Navbar from '../../components/navbar/Navbar';
+import ProductWrapper from '../../components/product-wrapper/ProductWrapper';
+import useFetchWithoutParams from '../../hooks/fetch-hooks/useFetchWithoutParams';
+import SubNavbar from '../../components/sub-navbar/SubNavbar';
+import Adv from '../../components/adv/Adv';
 
 const Home = () => {
-  const [date, setDate] = useState([]);
-
-  useEffect(() => {
-    fetch("https://mold-components.onrender.com/category/category-reel")
-      .then((res) => res.json())
-      .then((data) => {
-        setDate(data);
-        // console.log(data)
-
-
-      }
-      );
-  }, []);
-
-console.log(date);
-
+  const { data } = useFetchWithoutParams("category/category-reel");
   return (
-    <div className={classes.home__wrapper}>
-
-      <Container>
-      <div className={classes.cards__wrapper}>
-      <Swiper
-            slidesPerView={2.5}
-            centeredSlides={false}
-            loop={true}
-            className={classes.mySwiper}
-            breakpoints={{
-              600: {
-                width: 600,
-                slidesPerView: 2,
-              },
-              768: {
-                width: 768,
-                slidesPerView: 2.5,
-              },
-            }}
-          >
-        {
-          date[0].allRefinedProducts.map(product => (
-            <SwiperSlide className={classes.SwiperSlide} key={product._id}>
-            <Card 
-              image={product.productImages[0]}
-              title={product.productSubCategory_ru}
-              text={product.productName_ru}
-              price={product.productSizesAndQuantity[0].price}
-            />
-            </SwiperSlide>
-          ))
+    <div className={c.home}>
+      <SubNavbar/>
+      <Navbar sidebar={true}/>
+      <div className={c.banner__container}>
+      <Banner />
+      </div>
+      <div className={c.home__container}>
+        {data &&
+          data?.slice(0, 4).map((category__reel, indx) => 
+            <ProductWrapper key={indx} title={category__reel} data={category__reel?.allRefinedProducts}/>
+          )
         }
-        <SwiperSlideButtons/>
-      </Swiper>
       </div>
-      </Container>
-
-      <div className={classes.clients}>
-        <h2>Мы предлагаем клиентам следующее</h2>
-
-        <ul className={classes.clients__cards}>
-          <li>
-            <h3>Покупка в рассрочку</h3>
-            <p>Удобная схема онлайн-заказа продукции в MOLD-COMPONENTS.COM</p>
-          </li>
-          <li>
-            <h3>Бесплатная доставка</h3>
-            <p>Качественные продукты и услуги</p>
-          </li>
-          <li>
-            <h3>Бонусная система</h3>
-            <p>Бонусная система</p>
-          </li>
-          <li>
-            <h3>Помощь</h3>
-            <p>Частые вопросы</p>
-          </li>
-        </ul>
-      </div>
+      <Adv/>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

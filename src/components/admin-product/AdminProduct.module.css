@@ -1,0 +1,153 @@
+.admin__product{
+  width: 98%;
+  background-color: #fff;
+  margin: 20px auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: auto;
+  min-height: 250px;
+  max-height: 450px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.admin__productimage{
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.image__container{
+  box-sizing: content-box;
+  width: 200px;
+  height: 200px;
+  border: 1px solid gray;
+}
+
+.product__info{
+  height: 100%;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.product__infocollection{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 5px;
+  max-width: 75%;
+}
+
+.product__infocollection > li{
+  margin: 5px 0px;
+  margin-right: 10px;
+  background-color: var(--main-background-color);
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.product__infocollection > li:first-child{
+  margin-left: 0;
+}
+
+.info__cost{
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 20px;
+
+  color: var(--main-success-backgroundcolor);
+}
+
+
+.product__inforoute{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product__inforoute > p{
+  padding: 5px 15px;
+  background-color: #e9e9e9;
+  color: gray;
+  border-radius: 5px;
+  white-space: nowrap;
+  margin: 0px 5px;
+}
+
+
+.product__inforoute > ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  align-items: center;
+}
+
+
+.product__inforoute > ul > li{
+  padding: 0px 10px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid var(--main-background-color);
+}
+
+.product__management{
+  width: 300px;
+  height: 100%;
+}
+
+.product__management{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.product__management > button{
+  margin: 10px 0px;
+  width: 200px;
+  height: 45px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__management > button > svg{
+  margin-right: 10px;
+}
+
+.product__management > a > svg{
+  margin-right: 10px;
+}
+
+
+.product__management > button:first-child{
+  background-color: #f34b4b;
+  color: #fff;
+}
+
+.product__management > a:nth-child(2){
+  margin: 10px 0px;
+  text-decoration: none;
+  width: 200px;
+  height: 45px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gold;
+  color: #000;
+}
+
+.product__management > button:last-child{
+  background-color: dodgerblue;
+  color: #fff;
+}

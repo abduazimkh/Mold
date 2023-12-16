@@ -1,31 +1,56 @@
 {
-  "name": "mold",
+  "name": "client",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icon": "^1.0.0",
-    "react-icons": "^4.12.0",
-    "react-router-dom": "^6.17.0",
-    "sass": "^1.69.5",
-    "swiper": "^11.0.4"
+    "axios": "^0.23.0",
+    "i18next": "^21.8.9",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "i18next-http-backend": "^1.4.1",
+    "number-brm": "^1.4.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-ga": "^3.3.0",
+    "react-i18next": "^11.17.1",
+    "react-icons": "^4.3.1",
+    "react-magnifier": "^3.0.4",
+    "react-redux": "^8.0.1",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router": "^6.3.0",
+    "react-router-dom": "5.3.0",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.3.2",
+    "react-toastify": "^8.1.1",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.1",
+    "swiper": "^8.1.4",
+    "uuid": "^8.3.2",
+    "web-vitals": "^2.1.0"
   },
-  "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.3",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^4.4.5"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,0 +1,38 @@
+.about__container{
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 100px 0px ;
+  font-size: 20px;
+  line-height: 34px;  
+}
+
+.about__list{
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.about__title{
+  padding: 20px 0px;
+}
+
+.about__hero{
+  width: 100%;
+  margin: 30px 0px;
+}
+
+@media screen and (max-width: 600px) {
+  
+  .about__container{
+    font-size: 18px;
+  }
+
+  .about__list{
+    font-size: 18px;
+  }
+
+  .about__title{
+    padding: 20px 0px;
+    font-size: 24px;
+  }
+}

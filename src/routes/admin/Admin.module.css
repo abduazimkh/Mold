@@ -1,0 +1,30 @@
+ .admin{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.admin__container{
+  width: calc(100% - 58px);
+  margin-left: 58px;
+  overflow-y: auto;
+}
+
+.loader__container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.365);
+  color: #fff;
+  top: 0;
+  left: 0;
+  justify-content: center;
+}
+
+.loader__container > p{
+  margin-top: 15px;
+  font-size: 20px;
+}

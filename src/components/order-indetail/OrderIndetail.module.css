@@ -1,0 +1,164 @@
+.order__indetail{
+  width: 60%;
+  min-width: 1200px;
+  height: 800px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.order__indetailfade{
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.464);
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.cancel__btn{
+  width: 40px;
+  height: 40px;
+  background-color: #EB4C4B;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 23px;
+  border: none;
+  margin-top: -20px;
+  position: absolute;
+  right: -20px;
+  cursor: pointer;
+}
+
+.order__indetdailtitle{
+  width: 95%;
+  height: 80px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.order__container{
+  width: 100%;
+  height: calc(100% - 100px);
+  margin: 0px auto;
+  display: flex;
+  padding: 20px;
+}
+
+.order__itemsRenederer{
+  width: calc(100% - 310px);
+  height: 100%;
+  overflow-y: auto;
+  margin-right: 10px;
+}
+
+.order__itemsAllDetails{
+  width: 300px;
+  height: calc(100% - 20px);
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #fff;
+  padding: 20px;
+  background-color: var(--main-background-color);
+}
+
+.order__itemsAllDetails > h1{
+  text-align: center;
+}
+
+.order__itemsAllDetails > h2{
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 24px;
+  color: #EDEBEB;
+  margin-top: 20px;
+}
+
+.order__itemsAllDetails > p{
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.order__itemsAllDetails > button{
+  width: 95%;
+  height: 45px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.order__itemsAllDetails > button > svg{
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.order__deletebtn{
+  background-color: #EB4C4B;
+}
+
+
+.order__donebtn{
+  background-color: var(--main-success-backgroundcolor);
+}
+
+.order__itemIndividual{
+  width: 98%;
+  height: 170px;
+  box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.05);
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.order__itemIndividual > img{
+  width: 130px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.order__productDetail{
+  height: 100%;
+  flex: 1;
+  margin-left: 15px;
+  padding: 10px 0px;
+}
+
+.order__productDetail > h1{
+  font-size: 24px;
+}
+
+.product__sept{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.product__sept > p{
+  font-size: 20px;
+  flex: 1;
+}
+
+.product__sept > p > span{
+  color: var(--main-success-backgroundcolor);
+}
+
+.product__sept:last-child > p > span{
+  color: gold;
+}
